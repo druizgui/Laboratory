@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/cytoscape.min.js"></script>
+    <!--<script src="build/demo.js"></script>-->
+</head>
+<body>
+    <style>
+        #cy {
+            width: 300px;
+            height: 300px;
+            display: block;
+        }
+    </style>
+    <h1>Home</h1>
+    <p>Hello world</p>
+<div id="cy" class=" __________cytoscape_container" style="background: gainsboro; width: 100%; height: 800px "></div>
+<!--<script src="build/demo.js"></script>-->
+<script>
+
+    $.getJSON('https://pathwaycommons.github.io/cytoscape-sbgn-stylesheet/demo.json', function(data) {
+
+        var cy = cytoscape({
+            container: document.getElementById('cy'),
+
+            elements: data,
+
+            //[ // list of graph elements to start with
+            //    { // node a
+            //        data: { id: 'a' }
+            //    },
+            //    { // node b
+            //        data: { id: 'b' }
+            //    },
+            //    { // edge ab
+            //        data: { id: 'ab', source: 'a', target: 'b' }
+            //    }
+            //],
+
+            style: [ // the stylesheet for the graph
+                {
+                    selector: 'node',
+                    style: {
+                        'background-color': '#666',
+                        'label': 'data(id)'
+                    }
+                },
+
+                {
+                    selector: 'edge',
+                    style: {
+                        'width': 3,
+                        'line-color': '#ccc',
+                        'target-arrow-color': '#ccc',
+                        'target-arrow-shape': 'triangle',
+                        'curve-style': 'bezier'
+                    }
+                }
+            ],
+
+            layout: {
+                name: 'preset',
+                rows: 1
+            }
+        });
+    });
+
+
+</script>
+
+</body>
+</html>
