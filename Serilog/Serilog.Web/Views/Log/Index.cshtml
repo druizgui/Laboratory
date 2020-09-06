@@ -1,0 +1,38 @@
+﻿@using Microsoft.Extensions.Logging
+@model Serilog.Web.Models.LogViewModel
+@{
+    ViewData["Title"] = "Logs";
+}
+<style>
+    form {
+        margin: 0 auto;
+        width: 250px;
+    }
+
+    .form-entry {
+        width: 100px;
+        float: left;
+        text-align: left;
+        font-weight: bold
+    }
+
+    .form-entry ::after { content: ":"; }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Logs</h1>
+
+    <form asp-controller="Log" asp-action="Index" method="post">
+        <div style="width: 300px">
+            <span class="form-entry">Level</span>
+            <select asp-for="Level" style="width: 200px" asp-items="@new SelectList(Enum.GetNames(typeof(LogLevel)).Except(new[] { "None" }), "Information")">
+            </select>
+        </div>
+        <br/>
+        <div style="width: 300px">
+            <span class="form-entry">Message</span>
+            <input asp-for="Message" style="width: 200px"/><br/><br/>
+        </div>
+        <button type="submit">Send</button>
+    </form>
+</div>
