@@ -4,6 +4,8 @@
     <title>Responsive squared menu</title>
     <link href="lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="lib/font-awesome/css/all.css" rel="stylesheet">
+    
+    <meta http-equiv="refresh" content="5" />
 
     <style>
 
@@ -13,15 +15,15 @@
             }
         }
 
-        body { background: #515151 !important; }
+        body { background: #515151 }
 
-        .container {
+        .ak-menu-container {
             margin: auto;
             text-align: center;
-            /*padding-left: 50px;*/
+            padding: 16px 10px;
         }
 
-        .ani-fadein {
+        .ak-ani-fadein {
             -webkit-animation: fadein 3s;
             -moz-animation:    fadein 3s;
             -ms-animation:     fadein 3s;
@@ -38,37 +40,15 @@
         /* bootstrap beahviours on resize */
         .col-xs-6, .col-lg-2, .col-md-3 {
             display: inline-block;
-            min-height: 150px;
-            min-width:  150px;
-            max-width:  150px;
-            max-height: 150px;
-            padding: 10px 5px;
+            height: 150px;
+            width:  150px;
+            margin: 4px 6px;
         }
 
-        .menu-item {
-            position: relative;
-            text-align: center;
-            background: #fff;
+        .ak-menu-container a {
+            padding-top: 20px;
             border-radius: 4px;
-            padding-bottom: 100%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .menu-item .inner-mnu {
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-            width: 100%;
-        }
-
-        .menu-item a {
-            display: inline-block;
             text-decoration: none;
-            margin: 0;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -78,14 +58,11 @@
             height: 100%;
         }
 
-        .menu-item i {
-            display: inline-block;
-            position: relative;
-            margin: 10px;
-            margin-top: 16px;
+        .ak-menu-container .ak-menu i {
+            margin: 16px;
             font-size: 40px;
         }
-        .menu-item p {
+        .ak-menu-container .ak-menu p {
             font-size: 17px;
             font-weight: bold;
         }
@@ -93,30 +70,30 @@
 </head>
 
 <body>
-    <div class="container ani-fadein">
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #7FFFD4"><a href="#" style="color: #515151"><div class="inner-mnu"><i class="fas fa-users          " style="color: #515151"></i><p>Customers      </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #00009e"><a href="#" style="color: #ffffff"><div class="inner-mnu"><i class="fas fa-boxes          " style="color: #ffffff"></i><p>Products       </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #009479"><a href="#" style="color: #ffffff"><div class="inner-mnu"><i class="fas fa-money-bill-wave" style="color: #ffffff"></i><p>Accounting     </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #ffffff"><a href="#" style="color: #515151"><div class="inner-mnu"><i class="fas fa-bookmark       " style="color: #515151"></i><p>Marketing      </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #ffffff"><a href="#" style="color: #515151"><div class="inner-mnu"><i class="fas fa-bookmark       " style="color: #515151"></i><p>Sales          </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #ffffff"><a href="#" style="color: #515151"><div class="inner-mnu"><i class="fas fa-bookmark       " style="color: #515151"></i><p>Purchases      </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #ffffff"><a href="#" style="color: #515151"><div class="inner-mnu"><i class="fas fa-bookmark       " style="color: #515151"></i><p>Human Resources</p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #ffffff"><a href="#" style="color: #515151"><div class="inner-mnu"><i class="fas fa-university     " style="color: #515151"></i><p>Centers        </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #ffffff"><a href="#" style="color: #515151"><div class="inner-mnu"><i class="fas fa-building       " style="color: #515151"></i><p>Offices        </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #ffffff"><a href="#" style="color: #515151"><div class="inner-mnu"><i class="fas fa-bookmark       " style="color: #515151"></i><p>Creativity     </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #ffffff"><a href="#" style="color: #515151"><div class="inner-mnu"><i class="fas fa-warehouse      " style="color: #515151"></i><p>Warehouse      </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #ffffff"><a href="#" style="color: #515151"><div class="inner-mnu"><i class="fas fa-bookmark       " style="color: #515151"></i><p>Reselling      </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #ffffff"><a href="#" style="color: #515151"><div class="inner-mnu"><i class="fas fa-bookmark       " style="color: #515151"></i><p>Partners       </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #ff0000"><a href="#" style="color: #ffffff"><div class="inner-mnu"><i class="fas fa-lock-open      " style="color: #ffffff"></i><p>Roles          </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #ff5c00"><a href="#" style="color: #ffffff"><div class="inner-mnu"><i class="fas fa-address-card   " style="color: #ffffff"></i><p>Permissions    </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #ffffff"><a href="#" style="color: #515151"><div class="inner-mnu"><i class="fas fa-balance-scale  " style="color: #515151"></i><p>Legal          </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #ffffff"><a href="#" style="color: #515151"><div class="inner-mnu"><i class="fas fa-chart-pie      " style="color: #515151"></i><p>Analysis       </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #ffffff"><a href="#" style="color: #515151"><div class="inner-mnu"><i class="fas fa-question-circle" style="color: #515151"></i><p>Support        </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #ffffff"><a href="#" style="color: #515151"><div class="inner-mnu"><i class="fas fa-bookmark       " style="color: #515151"></i><p>Menu 14        </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #ffffff"><a href="#" style="color: #515151"><div class="inner-mnu"><i class="fas fa-bookmark       " style="color: #515151"></i><p>Menu 15        </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #ffffff"><a href="#" style="color: #515151"><div class="inner-mnu"><i class="fas fa-bookmark       " style="color: #515151"></i><p>Menu 16        </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #ffffff"><a href="#" style="color: #515151"><div class="inner-mnu"><i class="fas fa-bookmark       " style="color: #515151"></i><p>Menu 17        </p></div></a></div></div>
-        <div class="col-lg-2 col-md-3 col-xs-6"><div class="menu-item" style="background: #ffffff"><a href="#" style="color: #515151"><div class="inner-mnu"><i class="fas fa-bookmark       " style="color: #515151"></i><p>Menu 19        </p></div></a></div></div>
-    </div>
+    <nav class="ak-menu-container ak-ani-fadein">
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #515151;background: #7FFFD4"><div class="ak-menu"><i class="fa fa-users          "></i><p>Customers      </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #ffffff;background: #00009e"><div class="ak-menu"><i class="fa fa-boxes          "></i><p>Products       </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #ffffff;background: #009479"><div class="ak-menu"><i class="fa fa-money-bill-wave"></i><p>Accounting     </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #515151;background: #ffffff"><div class="ak-menu"><i class="fa fa-bookmark       "></i><p>Marketing      </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #515151;background: #ffffff"><div class="ak-menu"><i class="fa fa-bookmark       "></i><p>Sales          </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #515151;background: #ffffff"><div class="ak-menu"><i class="fa fa-bookmark       "></i><p>Purchases      </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #515151;background: #ffffff"><div class="ak-menu"><i class="fa fa-bookmark       "></i><p>Human Resources Department</p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #515151;background: #ffffff"><div class="ak-menu"><i class="fa fa-university     "></i><p>Centers        </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #515151;background: #ffffff"><div class="ak-menu"><i class="fa fa-building       "></i><p>Offices        </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #515151;background: #ffffff"><div class="ak-menu"><i class="fa fa-bookmark       "></i><p>Creativity     </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #515151;background: #ffffff"><div class="ak-menu"><i class="fa fa-warehouse      "></i><p>Warehouse      </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #515151;background: #ffffff"><div class="ak-menu"><i class="fa fa-bookmark       "></i><p>Reselling      </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #515151;background: #ffffff"><div class="ak-menu"><i class="fa fa-bookmark       "></i><p>Partners       </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #515151;background: #ffffff"><div class="ak-menu"><i class="fa fa-bookmark       "></i><p>Security       </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #ffffff;background: #ff0000"><div class="ak-menu"><i class="fa fa-lock-open      "></i><p>Roles          </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #ffffff;background: #ff5c00"><div class="ak-menu"><i class="fa fa-address-card   "></i><p>Permissions    </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #515151;background: #ffffff"><div class="ak-menu"><i class="fa fa-balance-scale  "></i><p>Legal          </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #515151;background: #ffffff"><div class="ak-menu"><i class="fa fa-chart-pie      "></i><p>Analysis       </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #515151;background: #ffffff"><div class="ak-menu"><i class="fa fa-question-circle"></i><p>Support        </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #515151;background: #ffffff"><div class="ak-menu"><i class="fa fa-bookmark       "></i><p>About As       </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #515151;background: #ffffff"><div class="ak-menu"><i class="fa fa-bookmark       "></i><p>Reservations   </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #515151;background: #ffffff"><div class="ak-menu"><i class="fa fa-bookmark       "></i><p>Menu 17        </p></div></a></div>
+        <div class="col-lg-2 col-md-3 col-xs-6"><a href="#" style="color: #515151;background: #ffffff"><div class="ak-menu"><i class="fa fa-bookmark       "></i><p>Menu 19        </p></div></a></div>
+    </nav>
 </body>
 </html>
