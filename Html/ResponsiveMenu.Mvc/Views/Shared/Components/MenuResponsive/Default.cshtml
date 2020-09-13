@@ -1,0 +1,13 @@
+﻿@using System.Drawing
+@model ResponsiveMenu.Mvc.MenuModel
+
+<style>.ak-menu-container a:hover {background-color: #3e3e3e !important;color: #fffedb !important;}</style>
+<nav class="ak-menu-container ak-ani-fadein">
+
+    @foreach (var item in Model.Items)
+    {
+        <div class="col-lg-2 col-md-3 col-xs-6">
+            <a href="#" style="color: @item.Color;background: @item.Background"><div class="ak-menu"><i class="fa fa-@item.Icon"></i><p>@item.Name</p></div></a>
+        </div>
+    }
+</nav>

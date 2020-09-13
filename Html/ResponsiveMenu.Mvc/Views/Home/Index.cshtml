@@ -1,8 +1,37 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+
+    var items = new List<MenuItem>()
+    {
+        new MenuItem { Color = "#515151", Background = "#7FFFD4", Icon = "users"          , Name = "Customers-"  },
+        new MenuItem { Color = "#ffffff", Background = "#00009e", Icon = "boxes"          , Name = "Products"   },
+        new MenuItem { Color = "#ffffff", Background = "#009479", Icon = "money-bill-wave", Name = "Accounting" },
+        new MenuItem { Color = "#515151", Background = "#ffffff", Icon = "envelope-open",   Name = "Marketing"  },
+        new MenuItem { Color = "#515151", Background = "#ffffff", Icon = "cash-register",   Name = "Sales"      },
+        new MenuItem { Color = "#515151", Background = "#ffffff", Icon = "credit-card",     Name = "Purchases"  },
+        new MenuItem { Color = "#515151", Background = "#ffffff", Icon = "user-alt",        Name = "Human Resources Department" },
+        new MenuItem { Color = "#515151", Background = "#ffffff", Icon = "university"     , Name = "Centers"    },
+        new MenuItem { Color = "#515151", Background = "#ffffff", Icon = "building"       , Name = "Offices"    },
+        new MenuItem { Color = "#515151", Background = "#ffffff", Icon = "paw"            , Name = "Creativity" },
+        new MenuItem { Color = "#515151", Background = "#ffffff", Icon = "warehouse"      , Name = "Warehouse"  },
+        new MenuItem { Color = "#515151", Background = "#ffffff", Icon = "clone"          , Name = "Reselling"  },
+        new MenuItem { Color = "#515151", Background = "#ffffff", Icon = "handshake"      , Name = "Partners"   },
+        new MenuItem { Color = "#515151", Background = "#ffffff", Icon = "shield-alt"     , Name = "Security"   },
+        new MenuItem { Color = "#ffffff", Background = "#ff0000", Icon = "lock-open"      , Name = "Roles"      },
+        new MenuItem { Color = "#ffffff", Background = "#ff5c00", Icon = "address-card"   , Name = "Permissions"},
+        new MenuItem { Color = "#515151", Background = "#ffffff", Icon = "balance-scale"  , Name = "Legal"      },
+        new MenuItem { Color = "#515151", Background = "#ffffff", Icon = "chart-pie"      , Name = "Analysis"   },
+        new MenuItem { Color = "#515151", Background = "#ffffff", Icon = "question-circle", Name = "Support"    },
+        new MenuItem { Color = "#515151", Background = "#ffffff", Icon = "info-circle"    , Name = "About us"   },
+        new MenuItem { Color = "#515151", Background = "#ffffff", Icon = "bed"            , Name = "Reservations" },
+        new MenuItem { Color = "#515151", Background = "#ffffff", Icon = "calendar"       , Name = "Schedule" },
+        new MenuItem { Color = "#515151", Background = "#ffffff", Icon = "basketball-ball", Name = "Sports" },
+    };
 }
+
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <vc:menu-responsive count="1" asp-items="@items"> </vc:menu-responsive>
+
 </div>
