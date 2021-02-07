@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FileExplorer": {
+      "commandName": "Project",
+      "commandLineArgs": "c:\\"
+    }
+  }
+}

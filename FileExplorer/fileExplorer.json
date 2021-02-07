@@ -1,0 +1,32 @@
+{
+  "Serilog": {
+    "MinimumLevel": "Verbose",
+    "Enrich": [ "WithExceptionDetails" ],
+    "WriteTo": [
+      {
+        "Name": "Async",
+        "Args": {
+          "configure": [
+            //{
+            //  "Name": "Console",
+            //  "Args": {
+            //    "theme": "Serilog.Sinks.SystemConsole.Themes.AnsiConsoleTheme::Code, Serilog.Sinks.Console",
+            //    "outputTemplate": "[{Level:u3}]{Message:j}{NewLine}"
+            //  }
+            //},
+            {
+              "Name": "File",
+              "Args": {
+                "path": "Logs\\log.txt",
+                "rollingInterval": "Month",
+                "rollOnFileSizeLimit": true,
+                "retainedFileCountLimit": 30,
+                "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}]{Message:j}{NewLine}{Exception}"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
