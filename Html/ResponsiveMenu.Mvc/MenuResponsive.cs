@@ -9,11 +9,23 @@
     {
         private const string DefaultIcon = "fa fa-square";
 
-        public async Task<IViewComponentResult> InvokeAsync(IList<MenuItem> aspItems)
+        public async Task<IViewComponentResult> InvokeAsync(
+            IList<MenuItem> aspItems,
+            //, string hoverColor = "#515151",
+            //string hoverBackground = "#515151",
+            //string defaultColor = "#515151",
+            //string defaultBackground = "#ffffff",
+            string defaultIcon)
         {
+            if (defaultIcon == null) defaultIcon = DefaultIcon;
+
+
             foreach (var item in aspItems)
             {
                 if (item.Icon == null) item.Icon = DefaultIcon;
+                //if (item.Color == null) item.Color = defaultColor;
+                //if (item.Background== null) item.Background = defaultBackground;
+                if (item.Icon == null) item.Icon = defaultIcon;
             }
 
             var model = new MenuModel
